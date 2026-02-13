@@ -1,6 +1,9 @@
 interface Base {
 	id: string
 	url: string
+
+	// This is only since the API returns 200 for errors.
+	status?: number
 }
 
 export interface Film extends Base {
@@ -12,7 +15,7 @@ export interface Film extends Base {
 	producer: string
 	movie_banner: string
 	release_date: string
-	running_time: string
+	running_time: number
 	rt_score: string
 	people: string[]
 	species: string[]
