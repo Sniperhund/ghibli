@@ -22,45 +22,28 @@ useSeoMeta({
 
 <template>
 	<UApp>
-		<UHeader>
+		<UHeader class="mb-8">
 			<template #left>
-				<NuxtLink to="/">
-					<AppLogo class="w-auto h-6 shrink-0" />
-				</NuxtLink>
-
-				<TemplateMenu />
+				<NuxtLink to="/">Studio Ghibli</NuxtLink>
 			</template>
 
-			<template #right>
-				<UColorModeButton />
-
-				<UButton
-					to="https://github.com/nuxt-ui-templates/starter"
-					target="_blank"
-					icon="i-simple-icons-github"
-					aria-label="GitHub"
-					color="neutral"
-					variant="ghost"
-				/>
-			</template>
+			<template #right> </template>
 		</UHeader>
 
-		<UMain>
+		<UMain class="max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8">
 			<NuxtPage />
 		</UMain>
 
-		<USeparator icon="i-simple-icons-nuxtdotjs" />
+		<USeparator />
 
 		<UFooter>
 			<template #left>
-				<p class="text-sm text-muted">
-					Built with Nuxt UI • © {{ new Date().getFullYear() }}
-				</p>
+				<p class="text-sm text-muted"></p>
 			</template>
 
 			<template #right>
 				<UButton
-					to="https://github.com/nuxt-ui-templates/starter"
+					to="https://github.com/Sniperhund"
 					target="_blank"
 					icon="i-simple-icons-github"
 					aria-label="GitHub"
