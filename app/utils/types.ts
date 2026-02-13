@@ -10,6 +10,7 @@ export interface Film extends Base {
 	description: string
 	director: string
 	producer: string
+	movie_banner: string
 	release_date: string
 	running_time: string
 	rt_score: string
