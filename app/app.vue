@@ -27,7 +27,9 @@ useSeoMeta({
 				<NuxtLink to="/">Studio Ghibli</NuxtLink>
 			</template>
 
-			<template #right> </template>
+			<template #right>
+				<UColorModeButton />
+			</template>
 		</UHeader>
 
 		<UMain

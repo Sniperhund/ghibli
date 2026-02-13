@@ -35,7 +35,9 @@ const formatMinutes = (minutes: number) => {
 
 			<div class="space-y-4">
 				<div>
-					<h1 class="text-3xl md:text-4xl font-bold text-white">
+					<h1
+						class="text-3xl md:text-4xl font-bold dark:text-white text-black"
+					>
 						{{ film.title }}
 					</h1>
 					<div class="flex gap-3 text-gray-500">
