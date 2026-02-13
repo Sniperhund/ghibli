@@ -22,7 +22,7 @@ useSeoMeta({
 
 <template>
 	<UApp>
-		<UHeader class="mb-8">
+		<UHeader>
 			<template #left>
 				<NuxtLink to="/">Studio Ghibli</NuxtLink>
 			</template>
@@ -30,7 +30,9 @@ useSeoMeta({
 			<template #right> </template>
 		</UHeader>
 
-		<UMain class="max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8">
+		<UMain
+			class="max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8"
+		>
 			<NuxtPage />
 		</UMain>
 
