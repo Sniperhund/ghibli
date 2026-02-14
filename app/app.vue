@@ -22,7 +22,7 @@ useSeoMeta({
 
 <template>
 	<UApp>
-		<UHeader>
+		<UHeader :toggle="false">
 			<template #left>
 				<NuxtLink to="/">Studio Ghibli</NuxtLink>
 			</template>
