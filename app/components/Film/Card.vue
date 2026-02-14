@@ -5,7 +5,7 @@ const { film } = defineProps<{ film: Film }>()
 <template>
 	<UCard
 		:ui="{ body: 'flex flex-col overflow-hidden gap-4 p-4' }"
-		class="cursor-pointer"
+		class="transition-shadow hover:shadow-lg"
 	>
 		<NuxtImg
 			:src="film.movie_banner"

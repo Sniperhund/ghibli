@@ -1,38 +1,35 @@
 <script setup lang="ts">
 const { limit } = defineProps<{ limit: number }>()
 
-const {
-	data: films,
-	status,
-	error,
-	refresh,
-} = useApiFetch<Film[]>("/films", {
+const { data, status, error, refresh } = useApiFetch<Film[]>("/films", {
 	query: {
 		limit, // For some reason limit isn't working... even though it's documented
 	},
 })
 
-// Small workaround...
-const limitedFilms = computed(() =>
-	Array.isArray(films.value) ? films.value?.slice(0, limit) : [],
+// Small workaround... for when the api returns 200 on a error
+const films = computed<Film[]>(() =>
+	Array.isArray(data.value) ? data.value : [],
 )
 </script>
 
 <template>
 	<section
 		class="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-4"
-		v-if="status != 'error'"
+		v-if="status != 'error' && status == 'success' && films.length"
 	>
 		<FilmCard
+			class="cursor-pointer"
+			role="link"
 			@click="navigateTo(`/film/${film.id}`)"
 			v-if="status == 'success'"
-			v-for="film in limitedFilms"
+			v-for="film in films"
 			:key="film.id"
 			:film="film"
 		/>
 
 		<!-- This won't actually be displayed, since SSR is on... that is a stupid mistake -->
-		<FilmSkeleton v-else v-for="i in limit" :key="`film-${i}`" />
+		<!-- <FilmSkeleton v-else v-for="i in limit" :key="`film-${i}`" /> -->
 	</section>
 	<ErrorMessage v-else :refresh="refresh" />
 </template>
