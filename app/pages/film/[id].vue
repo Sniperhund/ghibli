@@ -25,8 +25,10 @@ const formatMinutes = (minutes: number) => {
 </script>
 
 <template>
-	<article v-if="film">
-		<div class="grid grid-cols-2 gap-4">
+	<!-- As I learned with FilmList.vue, it should be fetched before the user even reaches this point
+         Just as a precaution does it check if film exists -->
+	<template v-if="film">
+		<section class="grid grid-cols-1 min-[55rem]:grid-cols-2 gap-4 mb-6">
 			<NuxtImg
 				:src="film.movie_banner"
 				:alt="film.title"
@@ -52,6 +54,11 @@ const formatMinutes = (minutes: number) => {
 
 				<p>{{ film.description }}</p>
 			</div>
-		</div>
-	</article>
+		</section>
+
+		<section class="space-y-2">
+			<h2 class="text-xl font-semibold">People</h2>
+			<PersonList :urls="film.people" />
+		</section>
+	</template>
 </template>
