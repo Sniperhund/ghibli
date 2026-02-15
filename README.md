@@ -18,8 +18,18 @@ npm run dev
 
 Åbn http://localhost:3000
 
+Kræver env variable `VITE_PUBLIC_BACKEND=https://ghibliapi.dev/`
+
 ## Udfordringer
 
 - I forbindelse med error handling testede jeg et ugyldigt endpoint (`/filma`).
   API'et returnede dog status 200 med `{ "status": 404 }` i body'en istedet for status 404.<br>
   Det sker også når man giver et forkert id til `/films/:id`
+- API'ets `limit` parameter virker ikke selvom den er dokumenteret, hvertfald på `/films`
+
+## Forbedringer med mere tid.
+
+- Optimering af billeder, det er endda tydeligt på mobil
+- Bedre animation for PersonList
+- Automatisk udregning af `peoplePerPage` ift. forskellige skærm størrelser
+- Have fjernet det layout shift der sker på nogle sider i PersonList
