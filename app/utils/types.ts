@@ -1,3 +1,5 @@
+// API Specific
+
 interface Base {
 	id: string
 	url: string
@@ -16,7 +18,7 @@ export interface Film extends Base {
 	movie_banner: string
 	release_date: string
 	running_time: number
-	rt_score: string
+	rt_score: number
 	people: string[]
 	species: string[]
 	vehicles: string[]
@@ -31,3 +33,13 @@ export interface Person extends Base {
 	films: string[]
 	species: string
 }
+
+// App Specific
+
+export type SortOptions =
+	| "a-z"
+	| "z-a"
+	| "newest"
+	| "oldest"
+	| "best-rating"
+	| "worst-rating"
