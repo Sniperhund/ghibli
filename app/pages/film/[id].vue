@@ -4,7 +4,7 @@ const route = useRoute()
 const { data: film } = useApiFetch<Film>(`/films/${route.params.id}`)
 
 watchEffect(() => {
-	// This is a very bad and cheap fix, but since the API doesn't return the correct status codes I can't see another way
+	// The API doesn't return the correct status codes so it's a workaround
 	if (film.value && film.value.status && film.value.status >= 400) {
 		throw createError({
 			status: 404,

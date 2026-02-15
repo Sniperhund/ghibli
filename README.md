@@ -1,6 +1,6 @@
 # Frontend Jobtest - Studio Ghibli
 
-Den hjemmeside henter og viser film fra _Studio Ghibli API_.<br>
+Denne hjemmeside henter og viser film fra _Studio Ghibli API_.<br>
 Brugeren kan se en liste over film og klikke på dem for at se detaljer.
 
 ### Teknologier brugt
