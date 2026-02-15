@@ -42,12 +42,14 @@ useSeoMeta({
 
 		<UFooter>
 			<template #left>
-				<p class="text-sm text-muted"></p>
+				<p class="text-sm text-muted">
+					Created as a jobtest by <b>Luacs Täkker</b>
+				</p>
 			</template>
 
 			<template #right>
 				<UButton
-					to="https://github.com/Sniperhund"
+					to="https://github.com/Sniperhund/ghibli"
 					target="_blank"
 					icon="i-simple-icons-github"
 					aria-label="GitHub"
