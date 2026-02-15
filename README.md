@@ -16,6 +16,8 @@ npm i
 npm run dev
 ```
 
+Selvom det er en bun.lock og bun er sat som package manager burde projektet køre helt fint med npm
+
 Åbn http://localhost:3000
 
 Kræver env variable `VITE_PUBLIC_BACKEND=https://ghibliapi.dev/`
